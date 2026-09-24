@@ -105,7 +105,7 @@ export default function App() {
     <input ref={uploadRef} type="file" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden onChange={e => upload(e.target.files[0])} aria-label="Upload resume file" />
     {menu && <button className="nav-scrim" aria-label="Close navigation" onClick={() => setMenu(false)} />}
     <aside className={`sidebar ${menu ? 'open' : ''}`}>
-      <a className="brand" href="#" onClick={e => { e.preventDefault(); go('overview'); }}><span className="brand-mark"><Compass size={25} /></span><span>CareerMatch<span className="brand-ai">AI</span></span></a>
+      <a className="brand" href="#" onClick={e => { e.preventDefault(); go('overview'); }}><span className="brand-mark"><Compass size={25} /></span><span>Build your Career with AI</span></a>
       <div className="workspace-label">YOUR CAREER WORKSPACE</div>
       <nav aria-label="Main navigation">{nav.map(([key, label, Icon]) => <button key={key} onClick={() => go(key)} className={`nav-item ${view === key ? 'active' : ''}`} aria-current={view === key ? 'page' : undefined}><Icon size={18} /><span>{label}</span>{key === 'gaps' && result?.gaps.length > 0 && <span className="nav-count">{result.gaps.length}</span>}{key === 'overview' && <span className="nav-dot" />}</button>)}</nav>
       <div className="sidebar-note"><span className="tiny-spark"><Sparkles size={18} /></span><h3>Your next chapter,<br />with a little clarity.</h3><p>Understand your strengths.<br />Build what comes next.</p><button className="text-link" onClick={() => setHelp(!help)}>How it works<ArrowUpRight size={14} /></button></div>

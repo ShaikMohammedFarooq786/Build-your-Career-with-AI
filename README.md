@@ -1,4 +1,4 @@
-# AI CareerMatch
+# Build your Career with AI
 
 A standalone resume and job matching workspace built with React, Vite, and Express. The repository was empty when implementation began; no existing application, pages, or database were replaced.
 
